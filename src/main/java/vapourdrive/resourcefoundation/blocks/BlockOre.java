@@ -2,44 +2,44 @@ package vapourdrive.resourcefoundation.blocks;
 
 import java.util.List;
 
-import vapourdrive.resourcefoundation.config.ConfigOptions;
-import vapourdrive.resourcefoundation.proxies.CommonProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import vapourdrive.resourcefoundation.config.ConfigOptions;
+import vapourdrive.resourcefoundation.proxies.CommonProxy;
 
 public class BlockOre extends Block
 {
-	public static final PropertyInteger VARIANT = PropertyInteger.create("variant", 0, 15);
-
 	public BlockOre()
 	{
 		super(Material.rock);
 		this.setCreativeTab(CommonProxy.Tab);
 		this.setUnlocalizedName("blockOre");
-		setDefaultState(blockState.getBaseState().withProperty(VARIANT, 0));
+		setDefaultState(blockState.getBaseState().withProperty(ResourceFoundationProperties.ORE_VARIANT, OreVariant.COPPER));
 	}
 	
 	@Override
 	public BlockState createBlockState()
 	{
-		return new BlockState(this, VARIANT);
+		return new BlockState(this, ResourceFoundationProperties.ORE_VARIANT);
 	}
 	
     @Override
     public IBlockState getStateFromMeta(int meta)
     {
-        return this.getDefaultState().withProperty(VARIANT, meta);
+    	if (meta >= OreVariant.values().length) {
+			meta = 0;
+		}
+		return getDefaultState().withProperty(ResourceFoundationProperties.ORE_VARIANT, OreVariant.values()[meta]);
     }
     @Override
     public int getMetaFromState(IBlockState state)
     {
-        return state.getValue(VARIANT);
+        return state.getValue(ResourceFoundationProperties.ORE_VARIANT).ordinal();
     }
 
 	@Override

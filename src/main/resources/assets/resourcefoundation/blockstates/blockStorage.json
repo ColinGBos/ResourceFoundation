@@ -1,0 +1,20 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cube_all",
+    "transform": "forge:default-block"
+  },
+  "variants": {
+    "variant=copper": [{ "textures": { "all": "resourcefoundation:blocks/blockCopper" } }],
+    "variant=bronze": [{ "textures": { "all": "resourcefoundation:blocks/blockBronze" } }],
+    "variant=tin": [{ "textures": { "all": "resourcefoundation:blocks/blockTin" } }],
+    "variant=aluminum": [{ "textures": { "all": "resourcefoundation:blocks/blockAluminum" } }],
+    "variant=silver": [{ "textures": { "all": "resourcefoundation:blocks/blockSilver" } }],
+    "variant=lead": [{ "textures": { "all": "resourcefoundation:blocks/blockLead" } }],
+    "variant=nickel": [{ "textures": { "all": "resourcefoundation:blocks/blockNickel" } }],
+    "variant=invar": [{ "textures": { "all": "resourcefoundation:blocks/blockInvar" } }],
+    "variant=electrum": [{ "textures": { "all": "resourcefoundation:blocks/blockElectrum" } }],
+    "variant=platinum": [{ "textures": { "all": "resourcefoundation:blocks/blockPlatinum" } }],
+    "variant=steel": [{ "textures": { "all": "resourcefoundation:blocks/blockSteel" } }]
+  }
+}

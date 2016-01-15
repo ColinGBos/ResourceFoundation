@@ -1,0 +1,16 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cube_all",
+    "transform": "forge:default-block"
+  },
+  "variants": {
+    "variant=copper": [{ "textures": { "all": "resourcefoundation:blocks/oreCopper" } }],
+    "variant=tin": [{ "textures": { "all": "resourcefoundation:blocks/oreTin" } }],
+    "variant=aluminum": [{ "textures": { "all": "resourcefoundation:blocks/oreAluminum" } }],
+    "variant=silver": [{ "textures": { "all": "resourcefoundation:blocks/oreSilver" } }],
+    "variant=lead": [{ "textures": { "all": "resourcefoundation:blocks/oreLead" } }],
+    "variant=nickel": [{ "textures": { "all": "resourcefoundation:blocks/oreNickel" } }],
+    "variant=platinum": [{ "textures": { "all": "resourcefoundation:blocks/orePlatinum" } }]
+  }
+}

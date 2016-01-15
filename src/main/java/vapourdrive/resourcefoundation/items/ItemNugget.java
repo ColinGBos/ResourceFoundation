@@ -14,7 +14,6 @@ public class ItemNugget extends Item
 {
 	public ItemNugget()
 	{
-		this.setUnlocalizedName("itemNugget");
 		this.setCreativeTab(CommonProxy.Tab);
 	}
 	
@@ -47,6 +46,6 @@ public class ItemNugget extends Item
     @Override
     public String getUnlocalizedName(ItemStack stack)
     {
-        return this.getUnlocalizedName() + "." + ConfigOptions.ExistingType[stack.getMetadata()];
+        return "nugget" + ConfigOptions.ExistingType[stack.getMetadata()];
     }
 }

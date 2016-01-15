@@ -14,7 +14,6 @@ public class ItemPlate extends Item
 {
 	public ItemPlate()
 	{
-		this.setUnlocalizedName("itemPlate");
 		this.setCreativeTab(CommonProxy.Tab);
 	}
 	
@@ -47,6 +46,6 @@ public class ItemPlate extends Item
     @Override
     public String getUnlocalizedName(ItemStack stack)
     {
-        return this.getUnlocalizedName() + "." + ConfigOptions.NewType[stack.getMetadata()];
+        return "plate" + ConfigOptions.NewType[stack.getMetadata()];
     }
 }

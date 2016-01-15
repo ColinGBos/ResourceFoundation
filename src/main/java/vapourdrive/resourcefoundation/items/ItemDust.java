@@ -14,7 +14,6 @@ public class ItemDust extends Item
 {
 	public ItemDust()
 	{
-		this.setUnlocalizedName("itemDust");
 		this.setCreativeTab(CommonProxy.Tab);
 	}
 	
@@ -47,6 +46,6 @@ public class ItemDust extends Item
     @Override
     public String getUnlocalizedName(ItemStack stack)
     {
-        return this.getUnlocalizedName() + "." + ConfigOptions.NewType[stack.getMetadata()];
+        return "dust" + ConfigOptions.NewType[stack.getMetadata()];
     }
 }

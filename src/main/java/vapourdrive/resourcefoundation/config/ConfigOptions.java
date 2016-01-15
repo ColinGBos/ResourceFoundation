@@ -4,21 +4,21 @@ public class ConfigOptions
 {
 	public static String[] ExistingType =
 	{
-			"copper", "tin", "aluminum", "bronze", "lead", "silver", "electrum", "nickel", "invar", "platinum", "steel"
+			"Copper", "Tin", "Aluminum", "Bronze", "Lead", "Silver", "Electrum", "Nickel", "Invar", "Platinum", "Steel"
 	};
-	public static String ExitingTypeString = "copper, tin, aluminum, bronze, lead, silver, electrum, nickel, invar, platinum, steel";
+	public static String ExitingTypeString = "Copper, Tin, Aluminum, Bronze, Lead, Silver, Electrum, Nickel, Invar, Platinum, Steel";
 	
 	public static String[] NewType =
 	{
-			"copper", "tin", "aluminum", "iron", "bronze", "lead", "silver", "gold", "electrum", "nickel", "invar", "platinum", "steel"
+			"Copper", "Tin", "Aluminum", "Iron", "Bronze", "Lead", "Silver", "Gold", "Electrum", "Nickel", "Invar", "Platinum", "Steel"
 	};
-	public static String NewTypeString = "copper, tin, aluminum, iron, bronze, lead, silver, gold, electrum, nickel, invar, platinum, steel";
+	public static String NewTypeString = "Copper, Tin, aluminum, Iron, Bronze, Lead, Silver, Gold, Electrum, Nickel, Invar, Platinum, Steel";
 
 	public static String[] Ores =
 	{
-			"copper", "tin", "aluminum", "lead", "silver", "nickel", "platinum"
+			"Copper", "Tin", "Aluminum", "Lead", "Silver", "Nickel", "Platinum"
 	};
-	public static String OreString = "copper, tin, aluminum, lead, silver, nickel, platinum";
+	public static String OreString = "Copper, Tin, Aluminum, Lead, Silver, Nickel, Platinum";
 	
 	public static boolean[] enabledOres;
 	public static boolean[] defaultEnabledOres = {true, true, true, true, true, true, true};
@@ -40,5 +40,6 @@ public class ConfigOptions
 
 	public static boolean[] enabledPlates;
 	public static boolean[] defaultEnabledPlates = {true, true, true, true, true, true, true, true, true, true, true, true, true};
+	public static boolean AddOreDictEntries;
 
 }

@@ -15,7 +15,7 @@ public class ItemBlockStorage extends ItemBlock
 	
 	public String getUnlocalizedName(ItemStack stack)
     {
-        return this.block.getUnlocalizedName() + "." + ConfigOptions.ExistingType[stack.getMetadata()];
+        return this.block.getUnlocalizedName() + "." + ConfigOptions.ExistingType[stack.getMetadata()].toLowerCase();
     }
 
 }

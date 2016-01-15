@@ -14,7 +14,6 @@ public class ItemGear extends Item
 {
 	public ItemGear()
 	{
-		this.setUnlocalizedName("itemGear");
 		this.setCreativeTab(CommonProxy.Tab);
 	}
 	
@@ -46,6 +45,6 @@ public class ItemGear extends Item
     @Override
     public String getUnlocalizedName(ItemStack stack)
     {
-        return this.getUnlocalizedName() + "." + ConfigOptions.NewType[stack.getMetadata()];
+        return "gear" + ConfigOptions.NewType[stack.getMetadata()];
     }
 }

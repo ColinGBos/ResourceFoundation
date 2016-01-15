@@ -12,7 +12,10 @@ import vapourdrive.resourcefoundation.ResourceFoundation;
 import vapourdrive.resourcefoundation.blocks.Mod_Blocks;
 import vapourdrive.resourcefoundation.config.ConfigHandler;
 import vapourdrive.resourcefoundation.creativetab.ResourceFoundationTab;
+import vapourdrive.resourcefoundation.events.EventsHandler;
 import vapourdrive.resourcefoundation.items.Mod_Items;
+import vapourdrive.resourcefoundation.oredict.OreDict;
+import vapourdrive.resourcefoundation.recipes.Recipes;
 
 public class CommonProxy
 {
@@ -28,13 +31,14 @@ public class CommonProxy
 		ConfigHandler.preInit(ConfigPath);
 		Mod_Items.preInit();
 		Mod_Blocks.preInit();
-		
+		OreDict.preInit();
 	}
 
 	public void Init(FMLInitializationEvent event)
 	{
 		ResourceFoundation.log.log(Level.INFO, "Starting Init");
-		
+		Recipes.init();
+		EventsHandler.init();
 	}
 
 }
