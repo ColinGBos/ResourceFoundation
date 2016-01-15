@@ -1,5 +1,9 @@
 //English Localization
 
+//CreativeTab
+resourcefoundation.creativetab.label=Resource Foundation
+
+//Blocks
 tile.blockStorage.name=Metal Block
 tile.blockStorage.copper.name=Block of Copper
 tile.blockStorage.tin.name=Block of Tin
@@ -22,6 +26,8 @@ tile.blockOre.silver.name=Silver Ore
 tile.blockOre.nickel.name=Nickel Ore
 tile.blockOre.platinum.name=Platinum Ore
 
+
+//Items
 ingotCopper.name=Copper Ingot
 ingotTin.name=Tin Ingot
 ingotAluminum.name=Aluminum Ingot

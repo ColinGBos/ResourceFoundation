@@ -1,15 +1,17 @@
 package vapourdrive.resourcefoundation;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import vapourdrive.resourcefoundation.proxies.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import vapourdrive.resourcefoundation.proxies.CommonProxy;
 
 @Mod(modid = ModInfo.ModID, version = ModInfo.Version)
 public class ResourceFoundation
@@ -31,5 +33,11 @@ public class ResourceFoundation
 	public void init(FMLInitializationEvent event)
 	{
 		proxy.Init(event);
+	}
+	
+	@EventHandler
+	public void posInit(FMLPostInitializationEvent event)
+	{
+		proxy.postInit(event);
 	}
 }

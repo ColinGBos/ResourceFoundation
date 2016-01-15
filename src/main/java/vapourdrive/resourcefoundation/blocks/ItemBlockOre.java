@@ -13,9 +13,16 @@ public class ItemBlockOre extends ItemBlock
 		super(block);
 	}
     
+	@Override
 	public String getUnlocalizedName(ItemStack stack)
     {
         return this.block.getUnlocalizedName() + "." + ConfigOptions.Ores[stack.getMetadata()].toLowerCase();
     }
+	
+	@Override
+	public int getMetadata(int damage)
+	{
+		return damage;
+	}
 
 }

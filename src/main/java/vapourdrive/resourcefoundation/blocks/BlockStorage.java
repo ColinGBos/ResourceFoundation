@@ -24,13 +24,13 @@ public class BlockStorage extends Block
 		setStepSound(soundTypeMetal);
 		this.setCreativeTab(CommonProxy.Tab);
 		this.setUnlocalizedName("blockStorage");
-		setDefaultState(blockState.getBaseState().withProperty(ResourceFoundationProperties.STORAGE_VARIANT, StorageVariant.COPPER));
+		setDefaultState(blockState.getBaseState().withProperty(BlockProperties.STORAGE_VARIANT, StorageVariant.COPPER));
 	}
 
 	@Override
 	public BlockState createBlockState()
 	{
-		return new BlockState(this, ResourceFoundationProperties.STORAGE_VARIANT);
+		return new BlockState(this, BlockProperties.STORAGE_VARIANT);
 	}
 
 	@Override
@@ -40,13 +40,13 @@ public class BlockStorage extends Block
 		{
 			meta = 0;
 		}
-		return this.getDefaultState().withProperty(ResourceFoundationProperties.STORAGE_VARIANT, StorageVariant.values()[meta]);
+		return this.getDefaultState().withProperty(BlockProperties.STORAGE_VARIANT, StorageVariant.values()[meta]);
 	}
 
 	@Override
 	public int getMetaFromState(IBlockState state)
 	{
-		return state.getValue(ResourceFoundationProperties.STORAGE_VARIANT).ordinal();
+		return state.getValue(BlockProperties.STORAGE_VARIANT).ordinal();
 	}
 
 	@Override

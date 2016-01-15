@@ -19,13 +19,13 @@ public class BlockOre extends Block
 		super(Material.rock);
 		this.setCreativeTab(CommonProxy.Tab);
 		this.setUnlocalizedName("blockOre");
-		setDefaultState(blockState.getBaseState().withProperty(ResourceFoundationProperties.ORE_VARIANT, OreVariant.COPPER));
+		setDefaultState(blockState.getBaseState().withProperty(BlockProperties.ORE_VARIANT, OreVariant.COPPER));
 	}
 	
 	@Override
 	public BlockState createBlockState()
 	{
-		return new BlockState(this, ResourceFoundationProperties.ORE_VARIANT);
+		return new BlockState(this, BlockProperties.ORE_VARIANT);
 	}
 	
     @Override
@@ -34,12 +34,12 @@ public class BlockOre extends Block
     	if (meta >= OreVariant.values().length) {
 			meta = 0;
 		}
-		return getDefaultState().withProperty(ResourceFoundationProperties.ORE_VARIANT, OreVariant.values()[meta]);
+		return getDefaultState().withProperty(BlockProperties.ORE_VARIANT, OreVariant.values()[meta]);
     }
     @Override
     public int getMetaFromState(IBlockState state)
     {
-        return state.getValue(ResourceFoundationProperties.ORE_VARIANT).ordinal();
+        return state.getValue(BlockProperties.ORE_VARIANT).ordinal();
     }
 
 	@Override

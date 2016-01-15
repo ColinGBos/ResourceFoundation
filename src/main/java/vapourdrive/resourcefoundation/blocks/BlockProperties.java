@@ -2,7 +2,7 @@ package vapourdrive.resourcefoundation.blocks;
 
 import net.minecraft.block.properties.PropertyEnum;
 
-public class ResourceFoundationProperties
+public class BlockProperties
 {
     // BlockStorage
 	public static final PropertyEnum<StorageVariant> STORAGE_VARIANT = PropertyEnum.create("variant", StorageVariant.class);

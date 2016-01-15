@@ -4,6 +4,7 @@ import java.io.File;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import org.apache.logging.log4j.Level;
@@ -16,6 +17,7 @@ import vapourdrive.resourcefoundation.events.EventsHandler;
 import vapourdrive.resourcefoundation.items.Mod_Items;
 import vapourdrive.resourcefoundation.oredict.OreDict;
 import vapourdrive.resourcefoundation.recipes.Recipes;
+import vapourdrive.resourcefoundation.world.WorldGenHandler;
 
 public class CommonProxy
 {
@@ -39,6 +41,12 @@ public class CommonProxy
 		ResourceFoundation.log.log(Level.INFO, "Starting Init");
 		Recipes.init();
 		EventsHandler.init();
+	}
+
+	public void postInit(FMLPostInitializationEvent event)
+	{
+		new WorldGenHandler();
+		
 	}
 
 }
