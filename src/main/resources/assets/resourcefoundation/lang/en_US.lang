@@ -1,0 +1,90 @@
+//English Localization
+
+tile.blockStorage.name=Metal Block
+tile.blockStorage.copper.name=Block of Copper
+tile.blockStorage.tin.name=Block of Tin
+tile.blockStorage.aluminum.name=Block of Aluminum
+tile.blockStorage.bronze.name=Block of Bronze
+tile.blockStorage.lead.name=Block of Lead
+tile.blockStorage.silver.name=Block of Silver
+tile.blockStorage.electrum.name=Block of Electrum
+tile.blockStorage.nickel.name=Block of Nickel
+tile.blockStorage.invar.name=Block of Invar
+tile.blockStorage.platinum.name=Block of Platinum
+tile.blockStorage.steel.name=Block of Ingot
+
+tile.blockOre.name=Ore Block
+tile.blockOre.copper.name=Copper Ore
+tile.blockOre.tin.name=Copper Ore
+tile.blockOre.aluminum.name=Aluminum Ore
+tile.blockOre.lead.name=Lead Ore
+tile.blockOre.silver.name=Silver Ore
+tile.blockOre.nickel.name=Nickel Ore
+tile.blockOre.platinum.name=Platinum Ore
+
+item.itemIngot.copper.name=Copper Ingot
+item.itemIngot.tin.name=Tin Ingot
+item.itemIngot.aluminum.name=Aluminum Ingot
+item.itemIngot.bronze.name=Bronze Ingot
+item.itemIngot.lead.name=Lead Ingot
+item.itemIngot.silver.name=Silver Ingot
+item.itemIngot.electrum.name=Electrum Ingot
+item.itemIngot.nickel.name=Nickel Ingot
+item.itemIngot.invar.name=Invar Ingot
+item.itemIngot.platinum.name=Platinum Ingot
+item.itemIngot.steel.name=Steel Ingot
+
+item.itemNugget.copper.name=Copper Nugget
+item.itemNugget.tin.name=Tin Nugget
+item.itemNugget.aluminum.name=Aluminum Nugget
+item.itemNugget.bronze.name=Bronze Nugget
+item.itemNugget.lead.name=Lead Nugget
+item.itemNugget.silver.name=Silver Nugget
+item.itemNugget.electrum.name=Electrum Nugget
+item.itemNugget.nickel.name=Nickel Nugget
+item.itemNugget.invar.name=Invar Nugget
+item.itemNugget.platinum.name=Platinum Nugget
+item.itemNugget.steel.name=Steel Nugget
+
+item.itemDust.copper.name=Copper Dust
+item.itemDust.tin.name=Tin Dust
+item.itemDust.aluminum.name=Aluminum Dust
+item.itemDust.iron.name=Iron Dust
+item.itemDust.bronze.name=Bronze Dust
+item.itemDust.lead.name=Lead Dust
+item.itemDust.silver.name=Silver Dust
+item.itemDust.gold.name=Gold Dust
+item.itemDust.electrum.name=Electrum Dust
+item.itemDust.nickel.name=Nickel Dust
+item.itemDust.invar.name=Invar Dust
+item.itemDust.platinum.name=Platinum Dust
+item.itemDust.steel.name=Steel Dust
+
+item.itemGear.copper.name=Copper Gear
+item.itemGear.tin.name=Tin Gear
+item.itemGear.aluminum.name=Aluminum Gear
+item.itemGear.iron.name=Iron Gear
+item.itemGear.bronze.name=Bronze Gear
+item.itemGear.lead.name=Lead Gear
+item.itemGear.silver.name=Silver Gear
+item.itemGear.gold.name=Gold Gear
+item.itemGear.electrum.name=Electrum Gear
+item.itemGear.nickel.name=Nickel Gear
+item.itemGear.invar.name=Invar Gear
+item.itemGear.platinum.name=Platinum Gear
+item.itemGear.steel.name=Steel Gear
+
+item.itemPlate.copper.name=Copper Plate
+item.itemPlate.tin.name=Tin Plate
+item.itemPlate.aluminum.name=Aluminum Plate
+item.itemPlate.iron.name=Iron Plate
+item.itemPlate.bronze.name=Bronze Plate
+item.itemPlate.lead.name=Lead Plate
+item.itemPlate.silver.name=Silver Plate
+item.itemPlate.gold.name=Gold Plate
+item.itemPlate.electrum.name=Electrum Plate
+item.itemPlate.nickel.name=Nickel Plate
+item.itemPlate.invar.name=Invar Plate
+item.itemPlate.platinum.name=Platinum Plate
+item.itemPlate.steel.name=Steel Plate
+

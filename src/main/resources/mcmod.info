@@ -1,16 +1,21 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "modid": "resourcefoundation",
+  "name": "Resource Foundation",
+  "description": "Commonly used ores and their respective items for 1.8.9",
+  "version": "1.8.9-0.0.0.0",
+  "mcversion": "1.8.9",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authors": [
+    "VapourDrive"
+  ],
+  "credits": "VapourDrive",
   "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
 }
 ]
