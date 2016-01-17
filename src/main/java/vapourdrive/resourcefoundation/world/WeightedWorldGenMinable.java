@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 
-import org.apache.logging.log4j.Level;
-
 import com.google.common.base.Predicate;
 
 import net.minecraft.block.state.IBlockState;
@@ -15,7 +13,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
-import vapourdrive.resourcefoundation.ResourceFoundation;
 import vapourdrive.resourcefoundation.utils.IndexedWeightedBlockState;
 import vapourdrive.resourcefoundation.utils.WeightedBlockState;
 
@@ -32,11 +29,9 @@ public class WeightedWorldGenMinable extends WorldGenerator
 		this.toReplace = ToReplace;
 		for (WeightedBlockState weightedBlock : WeightedBlocks)
 		{
-			ResourceFoundation.log.log(Level.INFO, "BlockState: " + weightedBlock.getState());
 			int BlockWeight = weightedBlock.getWeight();
 			indexedBlocks.add(new IndexedWeightedBlockState(totalWeight, totalWeight + BlockWeight, weightedBlock.getState()));
 			this.totalWeight = totalWeight + BlockWeight;
-			ResourceFoundation.log.log(Level.INFO, "Added: " + weightedBlock.getState());
 		}
 	}
 	

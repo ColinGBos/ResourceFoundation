@@ -6,6 +6,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerAboutToStartEvent;
 
 import org.apache.logging.log4j.Level;
 
@@ -17,6 +18,7 @@ import vapourdrive.resourcefoundation.events.EventsHandler;
 import vapourdrive.resourcefoundation.items.Mod_Items;
 import vapourdrive.resourcefoundation.oredict.OreDict;
 import vapourdrive.resourcefoundation.recipes.Recipes;
+import vapourdrive.resourcefoundation.utils.BlockDump;
 import vapourdrive.resourcefoundation.world.WorldGenHandler;
 
 public class CommonProxy
@@ -47,6 +49,11 @@ public class CommonProxy
 	{
 		new WorldGenHandler();
 		
+	}
+
+	public void serverStarted(FMLServerAboutToStartEvent event)
+	{
+		BlockDump.init(ConfigPath);
 	}
 
 }
