@@ -12,7 +12,6 @@ public enum OreVariant implements IStringSerializable
 	public String getName()
 	{
         return name().toLowerCase(Locale.ROOT);
-
 	}
 
 }

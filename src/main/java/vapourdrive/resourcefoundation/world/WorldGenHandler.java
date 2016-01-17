@@ -88,10 +88,10 @@ public class WorldGenHandler implements IWorldGenerator
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider)
 	{
-		Iterator iterator = generators.iterator();
+		Iterator<Generation> iterator = generators.iterator();
 		while (iterator.hasNext())
 		{
-			Generation generation = (Generation) iterator.next();
+			Generation generation = iterator.next();
 			if (world.provider.getDimensionId() == generation.getDimension()
 					&& generation.getType() == EnumGenerationType.WEIGHTEDSTANDARDCLUSTER)
 			{

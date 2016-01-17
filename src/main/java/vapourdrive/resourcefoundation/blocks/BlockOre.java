@@ -43,7 +43,7 @@ public class BlockOre extends Block
     }
 
 	@Override
-	public void getSubBlocks(Item block, CreativeTabs creativeTabs, List list)
+	public void getSubBlocks(Item block, CreativeTabs creativeTabs, List<ItemStack> list)
 	{
 		for (int i = 0; i < ConfigOptions.defaultEnabledOres.length; ++i)
 		{

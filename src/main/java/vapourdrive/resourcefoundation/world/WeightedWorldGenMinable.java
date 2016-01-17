@@ -6,6 +6,8 @@ import java.util.Random;
 
 import org.apache.logging.log4j.Level;
 
+import com.google.common.base.Predicate;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.state.pattern.BlockHelper;
 import net.minecraft.init.Blocks;
@@ -16,8 +18,6 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import vapourdrive.resourcefoundation.ResourceFoundation;
 import vapourdrive.resourcefoundation.utils.IndexedWeightedBlockState;
 import vapourdrive.resourcefoundation.utils.WeightedBlockState;
-
-import com.google.common.base.Predicate;
 
 public class WeightedWorldGenMinable extends WorldGenerator
 {
@@ -110,10 +110,10 @@ public class WeightedWorldGenMinable extends WorldGenerator
 	private boolean setBlock(World worldIn, Random rand, BlockPos blockpos)
 	{
 		int number = rand.nextInt(totalWeight);
-		Iterator iterator = indexedBlocks.iterator();
+		Iterator<IndexedWeightedBlockState> iterator = indexedBlocks.iterator();
 		while (iterator.hasNext())
 		{
-			IndexedWeightedBlockState indexedBlock = (IndexedWeightedBlockState) iterator.next();
+			IndexedWeightedBlockState indexedBlock = iterator.next();
 			if(indexedBlock.inRange(number))
 			{
 				return worldIn.setBlockState(blockpos, indexedBlock.getBlockState(), 2);
