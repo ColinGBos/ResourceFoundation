@@ -1,6 +1,7 @@
 package vapourdrive.resourcefoundation.world;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Random;
 
@@ -11,7 +12,6 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import vapourdrive.resourcefoundation.blocks.BlockProperties;
-import vapourdrive.resourcefoundation.blocks.Mod_Blocks;
 import vapourdrive.resourcefoundation.blocks.OreVariant;
 import vapourdrive.resourcefoundation.utils.WeightedBlockState;
 
@@ -27,23 +27,40 @@ public class WorldGenHandler implements IWorldGenerator
 
 	private void fillGenerators()
 	{
-		generators.add(new Generation(EnumGenerationType.WEIGHTEDSTANDARDCLUSTER, 8, 75, 96, 8, 0, new WeightedBlockState[]
+		generators.add(new Generation(EnumGenerationType.WEIGHTEDSTANDARDCLUSTER, 10, 0, 96, 24, new String[]
+		{
+			"Overworld"
+		}, new WeightedBlockState[]
+		{
+			new WeightedBlockState(10, "resourcefoundation:blockOre", getSingleMap(BlockProperties.ORE_VARIANT.getName(), OreVariant.LEAD.getName()))
+		}));
+		/*generators.add(new Generation(EnumGenerationType.WEIGHTEDSTANDARDCLUSTER, 10, 40, 75, 8, new String[]
+		{
+			"Overworld"
+		}, new WeightedBlockState[]
 		{
 			new WeightedBlockState(10, Mod_Blocks.BlockOre.getDefaultState().withProperty(BlockProperties.ORE_VARIANT, OreVariant.COPPER))
 		}));
-		generators.add(new Generation(EnumGenerationType.WEIGHTEDSTANDARDCLUSTER, 10, 40, 75, 8, 0, new WeightedBlockState[]
+		generators.add(new Generation(EnumGenerationType.WEIGHTEDSTANDARDCLUSTER, 8, 20, 55, 8, new String[]
 		{
-			new WeightedBlockState(10, Mod_Blocks.BlockOre.getDefaultState().withProperty(BlockProperties.ORE_VARIANT, OreVariant.COPPER))
-		}));
-		generators.add(new Generation(EnumGenerationType.WEIGHTEDSTANDARDCLUSTER, 8, 20, 55, 8, 0, new WeightedBlockState[]
+			"Overworld"
+		}, new WeightedBlockState[]
 		{
 			new WeightedBlockState(10, Mod_Blocks.BlockOre.getDefaultState().withProperty(BlockProperties.ORE_VARIANT, OreVariant.TIN))
 		}));
-		generators.add(new Generation(EnumGenerationType.WEIGHTEDSTANDARDCLUSTER, 3, 30, 60, 10, 0, new WeightedBlockState[]
+		generators.add(new Generation(EnumGenerationType.WEIGHTEDSTANDARDCLUSTER, 3, 30, 60, 10, new String[]
+		{
+			"Overworld"
+		},
+				new WeightedBlockState[]
 				{
-					new WeightedBlockState(10, Mod_Blocks.BlockOre.getDefaultState().withProperty(BlockProperties.ORE_VARIANT, OreVariant.ALUMINUM))
+					new WeightedBlockState(10, Mod_Blocks.BlockOre.getDefaultState().withProperty(BlockProperties.ORE_VARIANT,
+							OreVariant.ALUMINUM))
 				}));
-		generators.add(new Generation(EnumGenerationType.WEIGHTEDSTANDARDCLUSTER, 6, 5, 30, 8, 0,
+		generators.add(new Generation(EnumGenerationType.WEIGHTEDSTANDARDCLUSTER, 6, 5, 30, 8, new String[]
+		{
+			"Overworld"
+		},
 				new WeightedBlockState[]
 				{
 						new WeightedBlockState(80, Mod_Blocks.BlockOre.getDefaultState().withProperty(BlockProperties.ORE_VARIANT,
@@ -51,7 +68,10 @@ public class WorldGenHandler implements IWorldGenerator
 						new WeightedBlockState(20, Mod_Blocks.BlockOre.getDefaultState().withProperty(BlockProperties.ORE_VARIANT,
 								OreVariant.LEAD))
 				}));
-		generators.add(new Generation(EnumGenerationType.WEIGHTEDSTANDARDCLUSTER, 8, 10, 35, 8, 0,
+		generators.add(new Generation(EnumGenerationType.WEIGHTEDSTANDARDCLUSTER, 8, 10, 35, 8, new String[]
+		{
+			"Overworld"
+		},
 				new WeightedBlockState[]
 				{
 						new WeightedBlockState(10, Mod_Blocks.BlockOre.getDefaultState().withProperty(BlockProperties.ORE_VARIANT,
@@ -59,17 +79,30 @@ public class WorldGenHandler implements IWorldGenerator
 						new WeightedBlockState(90, Mod_Blocks.BlockOre.getDefaultState().withProperty(BlockProperties.ORE_VARIANT,
 								OreVariant.LEAD))
 				}));
-		generators.add(new Generation(EnumGenerationType.WEIGHTEDSTANDARDCLUSTER, 3, 5, 20, 4, 0, new WeightedBlockState[]
+		generators.add(new Generation(EnumGenerationType.WEIGHTEDSTANDARDCLUSTER, 3, 5, 20, 4, new String[]
+		{
+			"Overworld"
+		}, new WeightedBlockState[]
 		{
 			new WeightedBlockState(10, Mod_Blocks.BlockOre.getDefaultState().withProperty(BlockProperties.ORE_VARIANT, OreVariant.NICKEL))
 		}));
-		generators.add(new Generation(EnumGenerationType.WEIGHTEDSTANDARDCLUSTER, 1, 5, 30, 3, 0, new WeightedBlockState[]
+		generators.add(new Generation(EnumGenerationType.WEIGHTEDSTANDARDCLUSTER, 1, 5, 30, 3, new String[]
+		{
+			"Overworld"
+		}, new WeightedBlockState[]
 		{
 				new WeightedBlockState(20, Mod_Blocks.BlockOre.getDefaultState().withProperty(BlockProperties.ORE_VARIANT,
 						OreVariant.PLATINUM)),
 				new WeightedBlockState(80, Mod_Blocks.BlockOre.getDefaultState().withProperty(BlockProperties.ORE_VARIANT,
 						OreVariant.NICKEL))
-		}));
+		}));*/
+	}
+
+	private HashMap<String, String> getSingleMap(String prop, String variant)
+	{
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put(prop, variant);
+		return map;
 	}
 
 	private void generateStandardOre(Random rand, int chunkX, int chunkZ, World world, int iterations, WorldGenerator gen, int minY,
@@ -92,12 +125,15 @@ public class WorldGenHandler implements IWorldGenerator
 		while (iterator.hasNext())
 		{
 			Generation generation = iterator.next();
-			if (world.provider.getDimensionId() == generation.getDimension()
-					&& generation.getType() == EnumGenerationType.WEIGHTEDSTANDARDCLUSTER)
+			for (int i = 0; i < generation.getDimensions().length; i++)
 			{
-				WeightedWorldGenMinable generator = new WeightedWorldGenMinable(generation.getWeightedBlocks(), generation.getSize());
-				generateStandardOre(random, chunkX, chunkZ, world, generation.getFrequency(), generator, generation.getMinY(),
-						generation.getMaxY());
+				if (world.provider.getDimensionName() == generation.getDimensions()[i]
+						&& generation.getType() == EnumGenerationType.WEIGHTEDSTANDARDCLUSTER)
+				{
+					WeightedWorldGenMinable generator = new WeightedWorldGenMinable(generation.getWeightedBlocks(), generation.getSize());
+					generateStandardOre(random, chunkX, chunkZ, world, generation.getFrequency(), generator, generation.getMinY(),
+							generation.getMaxY());
+				}
 			}
 		}
 

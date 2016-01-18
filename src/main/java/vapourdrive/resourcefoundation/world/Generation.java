@@ -9,17 +9,17 @@ public class Generation
 	private final int minY;
 	private final int maxY;
 	private final int size;
-	private final int dimension;
+	private final String[] dimensions;
 	private final WeightedBlockState[] weightedBlocks;
 	
-	public Generation(EnumGenerationType Type, int Frequency, int MinY, int MaxY, int Size, int Dimension, WeightedBlockState[] WeightedBlocks)
+	public Generation(EnumGenerationType Type, int Frequency, int MinY, int MaxY, int Size, String[] Dimensions, WeightedBlockState[] WeightedBlocks)
 	{
 		this.type = Type;
 		this.frequency = Frequency;
 		this.minY = MinY;
 		this.maxY = MaxY;
 		this.size = Size;
-		this.dimension = Dimension;
+		this.dimensions = Dimensions;
 		this.weightedBlocks = WeightedBlocks;
 	}
 	
@@ -48,9 +48,9 @@ public class Generation
 		return this.size;
 	}
 	
-	public int getDimension()
+	public String[] getDimensions()
 	{
-		return this.dimension;
+		return this.dimensions;
 	}
 	
 	public WeightedBlockState[] getWeightedBlocks()

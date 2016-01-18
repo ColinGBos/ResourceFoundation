@@ -1,7 +1,5 @@
 package vapourdrive.resourcefoundation.blocks;
 
-import java.util.Locale;
-
 import net.minecraft.util.IStringSerializable;
 
 public enum OreVariant implements IStringSerializable
@@ -11,7 +9,7 @@ public enum OreVariant implements IStringSerializable
 	@Override
 	public String getName()
 	{
-        return name().toLowerCase(Locale.ROOT);
+        return name();
 	}
 
 }
