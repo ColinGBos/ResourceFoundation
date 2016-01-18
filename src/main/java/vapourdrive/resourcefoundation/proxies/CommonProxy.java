@@ -47,7 +47,7 @@ public class CommonProxy
 
 	public void postInit(FMLPostInitializationEvent event)
 	{
-		new WorldGenHandler();
+		new WorldGenHandler(ConfigPath);
 		
 	}
 

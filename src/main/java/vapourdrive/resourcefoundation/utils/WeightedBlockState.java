@@ -16,14 +16,14 @@ import com.google.common.collect.ImmutableMap;
 public class WeightedBlockState
 {
 	private final int weight;
-	private final ResourceLocation resourceLocation;
+	private final String block;
 	private final HashMap<String, String> properties;
 
-	public WeightedBlockState(int Weight, String ResourceLocation, HashMap<String, String> Properties)
+	public WeightedBlockState(int Weight, String Block, HashMap<String, String> Properties)
 	{
 		this.weight = Weight;
 		this.properties = Properties;
-		this.resourceLocation = new ResourceLocation(ResourceLocation);
+		this.block = Block;
 	}
 
 	public int getWeight()
@@ -33,8 +33,8 @@ public class WeightedBlockState
 
 	public IBlockState getState()
 	{
-		Block block = GameData.getBlockRegistry().getObject(resourceLocation);
-		ImmutableList<IBlockState> states = block.getBlockState().getValidStates();
+		Block foundBlock = GameData.getBlockRegistry().getObject(new ResourceLocation(block));
+		ImmutableList<IBlockState> states = foundBlock.getBlockState().getValidStates();
 		Iterator<IBlockState> iterator = states.iterator();
 		while (iterator.hasNext())
 		{
@@ -60,7 +60,7 @@ public class WeightedBlockState
 			}
 		}
 		
-		return block.getDefaultState();
+		return foundBlock.getDefaultState();
 	}
 
 }
