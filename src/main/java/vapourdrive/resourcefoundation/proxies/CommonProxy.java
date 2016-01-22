@@ -18,8 +18,7 @@ import vapourdrive.resourcefoundation.events.EventsHandler;
 import vapourdrive.resourcefoundation.items.Mod_Items;
 import vapourdrive.resourcefoundation.oredict.OreDict;
 import vapourdrive.resourcefoundation.recipes.Recipes;
-import vapourdrive.resourcefoundation.utils.BlockDump;
-import vapourdrive.resourcefoundation.world.WorldGenHandler;
+import vapourdrive.resourcefoundation.world.GenLoaderCompat;
 
 public class CommonProxy
 {
@@ -43,17 +42,16 @@ public class CommonProxy
 		ResourceFoundation.log.log(Level.INFO, "Starting Init");
 		Recipes.init();
 		EventsHandler.init();
+		GenLoaderCompat.init();
 	}
 
 	public void postInit(FMLPostInitializationEvent event)
 	{
-		new WorldGenHandler(ConfigPath);
 		
 	}
 
 	public void serverStarted(FMLServerAboutToStartEvent event)
 	{
-		BlockDump.init(ConfigPath);
 	}
 
 }

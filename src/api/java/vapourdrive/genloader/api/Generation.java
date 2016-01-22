@@ -1,19 +1,24 @@
-package vapourdrive.resourcefoundation.world;
+package vapourdrive.genloader.api;
 
-import vapourdrive.resourcefoundation.utils.WeightedBlockState;
+import java.util.ArrayList;
+
+import net.minecraftforge.common.BiomeDictionary.Type;
 
 public class Generation
 {
+	private final String category;
 	private final EnumGenerationType type;
 	private final int frequency;
 	private final int minY;
 	private final int maxY;
 	private final int size;
-	private final String[] dimensions;
+	private final ArrayList<String> dimensions;
+	private final ArrayList<Type> biomeTypes;
 	private final WeightedBlockState[] weightedBlocks;
 	
-	public Generation(EnumGenerationType Type, int Frequency, int MinY, int MaxY, int Size, String[] Dimensions, WeightedBlockState[] WeightedBlocks)
+	public Generation(String Category, EnumGenerationType Type, int Frequency, int MinY, int MaxY, int Size, ArrayList<String> Dimensions, ArrayList<Type> Biomes, WeightedBlockState[] WeightedBlocks)
 	{
+		this.category = Category;
 		this.type = Type;
 		this.frequency = Frequency;
 		this.minY = MinY;
@@ -21,6 +26,12 @@ public class Generation
 		this.size = Size;
 		this.dimensions = Dimensions;
 		this.weightedBlocks = WeightedBlocks;
+		this.biomeTypes = Biomes;
+	}
+	
+	public String getOwner()
+	{
+		return this.category;
 	}
 	
 	public EnumGenerationType getType()
@@ -48,9 +59,14 @@ public class Generation
 		return this.size;
 	}
 	
-	public String[] getDimensions()
+	public ArrayList<String> getDimensions()
 	{
 		return this.dimensions;
+	}
+	
+	public ArrayList<Type> getBiomeTypes()
+	{
+		return this.biomeTypes;
 	}
 	
 	public WeightedBlockState[] getWeightedBlocks()

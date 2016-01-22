@@ -1,4 +1,4 @@
-package vapourdrive.resourcefoundation.world;
+package vapourdrive.genloader.api;
 
 public enum EnumGenerationType
 {

@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 
 import vapourdrive.resourcefoundation.proxies.CommonProxy;
 
-@Mod(modid = ModInfo.ModID, version = ModInfo.Version)
+@Mod(modid = ModInfo.ModID, version = ModInfo.Version, dependencies = "required-after:genloader")
 public class ResourceFoundation
 {   
 	@Instance(ModInfo.ModID)
