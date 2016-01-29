@@ -11,6 +11,7 @@ public class ItemBlockStorage extends ItemBlock
 	public ItemBlockStorage(Block block)
 	{
 		super(block);
+		this.hasSubtypes = true;
 	}
 	
 	@Override
