@@ -38,5 +38,4 @@ public class Mod_Blocks
 			ModelLoader.setCustomModelResourceLocation(item, e.ordinal(), new ModelResourceLocation(baseName, variantName));
 		}
 	}
-
 }

@@ -15,6 +15,8 @@
     "variant=invar": [{ "textures": { "all": "resourcefoundation:blocks/blockInvar" } }],
     "variant=electrum": [{ "textures": { "all": "resourcefoundation:blocks/blockElectrum" } }],
     "variant=platinum": [{ "textures": { "all": "resourcefoundation:blocks/blockPlatinum" } }],
-    "variant=steel": [{ "textures": { "all": "resourcefoundation:blocks/blockSteel" } }]
+    "variant=steel": [{ "textures": { "all": "resourcefoundation:blocks/blockSteel" } }],
+    "variant=zinc": [{ "textures": { "all": "resourcefoundation:blocks/blockZinc" } }],
+    "variant=brass": [{ "textures": { "all": "resourcefoundation:blocks/blockBrass" } }]
   }
 }

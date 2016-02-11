@@ -11,6 +11,7 @@
     "variant=silver": [{ "textures": { "all": "resourcefoundation:blocks/oreSilver" } }],
     "variant=lead": [{ "textures": { "all": "resourcefoundation:blocks/oreLead" } }],
     "variant=nickel": [{ "textures": { "all": "resourcefoundation:blocks/oreNickel" } }],
-    "variant=platinum": [{ "textures": { "all": "resourcefoundation:blocks/orePlatinum" } }]
+    "variant=platinum": [{ "textures": { "all": "resourcefoundation:blocks/orePlatinum" } }],
+    "variant=zinc": [{ "textures": { "all": "resourcefoundation:blocks/oreZinc" } }]
   }
 }

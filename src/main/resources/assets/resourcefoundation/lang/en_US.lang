@@ -16,6 +16,8 @@ tile.blockStorage.nickel.name=Block of Nickel
 tile.blockStorage.invar.name=Block of Invar
 tile.blockStorage.platinum.name=Block of Platinum
 tile.blockStorage.steel.name=Block of Steel
+tile.blockStorage.zinc.name=Block of Zinc
+tile.blockStorage.brass.name=Block of Brass
 
 tile.blockOre.name=Ore Block
 tile.blockOre.copper.name=Copper Ore
@@ -25,7 +27,7 @@ tile.blockOre.lead.name=Lead Ore
 tile.blockOre.silver.name=Silver Ore
 tile.blockOre.nickel.name=Nickel Ore
 tile.blockOre.platinum.name=Platinum Ore
-
+tile.blockOre.zinc.name=Zinc Ore
 
 //Items
 ingotCopper.name=Copper Ingot
@@ -39,6 +41,8 @@ ingotNickel.name=Nickel Ingot
 ingotInvar.name=Invar Ingot
 ingotPlatinum.name=Platinum Ingot
 ingotSteel.name=Steel Ingot
+ingotZinc.name=Zinc Ingot
+ingotBrass.name=Brass Ingot
 
 nuggetCopper.name=Copper Nugget
 nuggetTin.name=Tin Nugget
@@ -51,6 +55,8 @@ nuggetNickel.name=Nickel Nugget
 nuggetInvar.name=Invar Nugget
 nuggetPlatinum.name=Platinum Nugget
 nuggetSteel.name=Steel Nugget
+nuggetZinc.name=Zinc Nugget
+nuggetBrass.name=Brass Nugget
 
 dustCopper.name=Copper Dust
 dustTin.name=Tin Dust
@@ -65,6 +71,8 @@ dustNickel.name=Nickel Dust
 dustInvar.name=Invar Dust
 dustPlatinum.name=Platinum Dust
 dustSteel.name=Steel Dust
+dustZinc.name=Zinc Dust
+dustBrass.name=Brass Dust
 
 gearCopper.name=Copper Gear
 gearTin.name=Tin Gear
@@ -79,6 +87,8 @@ gearNickel.name=Nickel Gear
 gearInvar.name=Invar Gear
 gearPlatinum.name=Platinum Gear
 gearSteel.name=Steel Gear
+gearZinc.name=Zinc Gear
+gearBrass.name=Brass Gear
 
 plateCopper.name=Copper Plate
 plateTin.name=Tin Plate
@@ -92,4 +102,5 @@ plateElectrum.name=Electrum Plate
 plateNickel.name=Nickel Plate
 plateInvar.name=Invar Plate
 plateSteel.name=Steel Plate
-
+plateZinc.name=Zinc Plate
+plateBrass.name=Brass Plate

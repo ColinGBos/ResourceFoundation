@@ -36,6 +36,7 @@ public class Recipes
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Mod_Items.ItemDust, 2, EnumNew.ELECTRUM.ordinal()), "dustSilver", "dustGold"));
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Mod_Items.ItemDust, 4, EnumNew.BRONZE.ordinal()), "dustTin", "dustCopper", "dustCopper", "dustCopper"));
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Mod_Items.ItemDust, 3, EnumNew.INVAR.ordinal()), "dustIron", "dustNickel", "dustNickel"));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Mod_Items.ItemDust, 4, EnumNew.BRASS.ordinal()), "dustCopper", "dustCopper", "dustCopper", "dustZinc"));
 
 	}
 
@@ -48,6 +49,8 @@ public class Recipes
 		tryRegisterSmelting(new ItemStack(blockOre, 1, EnumOre.LEAD.ordinal()), new ItemStack(itemIngot, 1, EnumExist.LEAD.ordinal()), 0.3f, ConfigOptions.enabledOres, EnumOre.LEAD.ordinal(), ConfigOptions.enabledIngots, EnumExist.LEAD.ordinal());
 		tryRegisterSmelting(new ItemStack(blockOre, 1, EnumOre.NICKEL.ordinal()), new ItemStack(itemIngot, 1, EnumExist.NICKEL.ordinal()), 0.3f, ConfigOptions.enabledOres, EnumOre.NICKEL.ordinal(), ConfigOptions.enabledIngots, EnumExist.NICKEL.ordinal());
 		tryRegisterSmelting(new ItemStack(blockOre, 1, EnumOre.PLATINUM.ordinal()), new ItemStack(itemIngot, 1, EnumExist.PLATINUM.ordinal()), 0.3f, ConfigOptions.enabledOres, EnumOre.PLATINUM.ordinal(), ConfigOptions.enabledIngots, EnumExist.PLATINUM.ordinal());
+		tryRegisterSmelting(new ItemStack(blockOre, 1, EnumOre.ZINC.ordinal()), new ItemStack(itemIngot, 1, EnumExist.ZINC.ordinal()), 0.3f, ConfigOptions.enabledOres, EnumOre.ZINC.ordinal(), ConfigOptions.enabledIngots, EnumExist.ZINC.ordinal());
+
 	}
 
 	private static void AddDustSmeltRecipe(Item itemDust, Item itemIngot)
@@ -65,6 +68,9 @@ public class Recipes
 		tryRegisterSmelting(new ItemStack(itemDust, 1, EnumNew.INVAR.ordinal()), new ItemStack(itemIngot, 1, EnumExist.INVAR.ordinal()), 0.3f, ConfigOptions.enabledDusts, EnumNew.INVAR.ordinal(), ConfigOptions.enabledIngots, EnumExist.INVAR.ordinal());
 		tryRegisterSmelting(new ItemStack(itemDust, 1, EnumNew.PLATINUM.ordinal()), new ItemStack(itemIngot, 1, EnumExist.PLATINUM.ordinal()), 0.3f, ConfigOptions.enabledDusts, EnumNew.PLATINUM.ordinal(), ConfigOptions.enabledIngots, EnumExist.PLATINUM.ordinal());
 		tryRegisterSmelting(new ItemStack(itemDust, 1, EnumNew.STEEL.ordinal()), new ItemStack(itemIngot, 1, EnumExist.STEEL.ordinal()), 0.3f, ConfigOptions.enabledDusts, EnumNew.STEEL.ordinal(), ConfigOptions.enabledIngots, EnumExist.STEEL.ordinal());
+		tryRegisterSmelting(new ItemStack(itemDust, 1, EnumNew.ZINC.ordinal()), new ItemStack(itemIngot, 1, EnumExist.ZINC.ordinal()), 0.3f, ConfigOptions.enabledDusts, EnumNew.ZINC.ordinal(), ConfigOptions.enabledIngots, EnumExist.ZINC.ordinal());
+		tryRegisterSmelting(new ItemStack(itemDust, 1, EnumNew.BRASS.ordinal()), new ItemStack(itemIngot, 1, EnumExist.BRASS.ordinal()), 0.3f, ConfigOptions.enabledDusts, EnumNew.BRASS.ordinal(), ConfigOptions.enabledIngots, EnumExist.BRASS.ordinal());
+
 	}
 	
 	private static void tryRegisterSmelting(ItemStack itemStack, ItemStack itemStack2, float f, boolean[] enabledItems, int i)

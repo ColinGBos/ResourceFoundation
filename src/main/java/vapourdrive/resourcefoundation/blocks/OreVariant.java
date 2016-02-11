@@ -4,7 +4,7 @@ import net.minecraft.util.IStringSerializable;
 
 public enum OreVariant implements IStringSerializable
 {
-	COPPER, TIN, ALUMINUM, LEAD, SILVER, NICKEL, PLATINUM;
+	COPPER, TIN, ALUMINUM, LEAD, SILVER, NICKEL, PLATINUM, ZINC;
 
 	@Override
 	public String getName()

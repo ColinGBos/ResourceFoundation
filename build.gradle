@@ -25,7 +25,7 @@ group= "vapourdrive.resourcefoundation" // http://maven.apache.org/guides/mini/g
 archivesBaseName = "ResourceFoundation"
 
 minecraft {
-    version = "1.8.9-11.15.0.1697"
+    version = "1.8.9-11.15.1.1732"
     runDir = "../run"
     
     // the mappings can be changed at any time, and must be in the following format.
